@@ -22,7 +22,8 @@ if __name__ == "__main__":
     try:
         msg = install_plugin_update()
         print(msg)
-        os.MessageBox(msg, "更新结果")
+        if msg:
+            os.MessageBox(msg, "更新结果")
     except BaseException as e:
         pass
     main()

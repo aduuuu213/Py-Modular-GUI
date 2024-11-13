@@ -49,7 +49,7 @@ def install_plugin_update():
     """安装插件更新包"""
     retstr = ""
     json_file_path = Path(f'{PLUGIN_UPDATE_CACHE_DIR}/update_info.json')
-    if  json_file_path.exists():
+    if json_file_path.exists():
         with open(json_file_path, 'r') as f:
             update_info = json.load(f)
         for plugin_name, file_path in update_info.items():
@@ -59,7 +59,7 @@ def install_plugin_update():
                 retstr += f"插件 {plugin_name} 更新成功\n"
             else:
                 retstr += f"插件 {plugin_name} 更新失败\n"
-    with open(json_file_path, 'w') as f:
-        json.dump({}, f)
+        with open(json_file_path, 'w') as f:
+            json.dump({}, f)
     return retstr
 
