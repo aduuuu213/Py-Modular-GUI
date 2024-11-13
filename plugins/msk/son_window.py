@@ -283,7 +283,7 @@ class msk(QWidget):
                 layout.addWidget(widget[0], stretch=widget[1])
             else:
                 layout.addWidget(widget)
-                
+    
     def _test_play_music(self):
         from playsound import playsound
         from playsound import PlaysoundException
@@ -293,6 +293,7 @@ class msk(QWidget):
             try:
                 playsound("resources/ring.mp3")  # 替换为你的音乐文件路径
             except PlaysoundException as e:
-                self.show_message("错误", f"{e}")
+                # self.show_message("错误", f"{e}")
+                self.logger.error(f"{e}")
 
         Thread(target=play_sound).start()
