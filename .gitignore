@@ -57,3 +57,5 @@ info.json
 .conda
 *.pyi
 *.zip
+
+*.html
