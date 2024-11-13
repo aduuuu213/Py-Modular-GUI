@@ -11,7 +11,7 @@ class demoWorker(QThread):
     def __init__(self):
         super().__init__()
         self._running = False  # 线程运行标志
-        self.logger = logger_manager.logger
+        self.logger = logger_manager.logger # 全局可用的日志记录器 可显示到主窗口的日志框
 
     def run(self):
         while self._running:
