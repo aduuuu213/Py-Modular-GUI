@@ -1,7 +1,10 @@
 from pathlib import Path
 
+from PySide2.QtCore import QUrl
+from PySide2.QtGui import QDesktopServices
+from PySide2.QtWidgets import QAction, QActionGroup, QMenu, QMessageBox
+
 from constants.config import WindowConstants
-from PySide2.QtWidgets import QMenu, QMessageBox, QAction, QActionGroup
 from utils.logger_manager import logger_manager
 from utils.messages import show_message
 
@@ -53,6 +56,9 @@ class MenuBuilder:
         """构建帮助菜单"""
         help_menu = self.menubar.addMenu('帮助')
         # 添加关于菜单项
+        git_action = QAction('Github', self.window)
+        git_action.triggered.connect(lambda: QDesktopServices.openUrl(QUrl("https://github.com/aduuuu213/Py-Modular-GUI")))
+        help_menu.addAction(git_action)
         about_action = QAction('关于', self.window)
         about_action.triggered.connect(self.show_about)
         help_menu.addAction(about_action)
@@ -179,16 +185,15 @@ class MenuBuilder:
     def show_about(self):
         disclaimer = (
             "免责声明：\n\n"
-            "1. 本软件仅供学习和测试目的，使用者需确保其使用符合当地法律法规。\n"
-            "2. 严禁将本软件用于任何法用途，包括但不限于数据盗取、网络攻击、破坏计算机系统等行为。\n"
-            "3. 使用本软件产生的一切法律后果与作者无关，作者不对因使用本软件导致的任何直接或间接损失承担责任。\n"
-            "4. 本软件按“现状”提供，作者不对其功能、性能或适用性作出任何明示或暗示的保证。\n"
-            "5. 本软件仅供调试和学习使用，请在测试后及时删除。\n"
-            "6. 使用本软件即表示您同意本免责声明的所有条款，并承诺遵守相关法律法规。\n"
-            "7. 本免责声明的条款如有变更，恕不另行通知，建议用户定期查阅。\n"
-            "8. 如您不同意本免责声明的任何条款，请立即停止使用本软件。\n"
-            "9. 本软件为免费提供，作者不对软件的使用、修改或分发承担任何责任。\n"
-            "10. 使用者应对其行为负责，因使用本软件进行任何违法行为所产生的法律责任，均由使用者自行承担。\n"
+            "1. 本软件框架仅供学习和测试目的，使用者需确保其使用符合当地法律法规。\n"
+            "2. 严禁将本软件框架用于任何非法用途，包括但不限于数据盗取、网络攻击、破坏计算机系统等行为。\n"
+            "3. 本软件框架不对用户开发或使用的插件内容负责，使用者应自行承担因插件使用而产生的所有法律后果。\n"
+            "4. 本软件框架按“现状”提供，作者不对其功能、性能或适用性作出任何明示或暗示的保证。\n"
+            "5. 使用本软件框架即表示您同意本免责声明的所有条款，并承诺遵守相关法律法规。\n"
+            "6. 本免责声明的条款如有变更，恕不另行通知，建议用户定期查阅。\n"
+            "7. 如您不同意本免责声明的任何条款，请立即停止使用本软件框架。\n"
+            "8. 本软件框架为免费提供，作者不对框架的使用、修改或分发承担任何责任。\n"
+            "9. 使用者应对其行为负责，因使用本软件框架及其插件进行任何违法行为所产生的法律责任，均由使用者自行承担。\n"
         )
         QMessageBox.about(self.window, "关于", disclaimer)
 

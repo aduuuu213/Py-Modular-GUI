@@ -64,15 +64,8 @@ def main_process(window):
                                     else:
                                         logger.error('初始化失败')
                                         return
-                            # 使用 invokeMethod 在主线程中更新 UI
-                            if status:
-                                QMetaObject.invokeMethod(label, "setStyleSheet", 
-                                    Qt.ConnectionType.QueuedConnection,
-                                    "background-color: #4CAF50;")
-                            else:
-                                QMetaObject.invokeMethod(label, "setStyleSheet",
-                                    Qt.ConnectionType.QueuedConnection,
-                                    "background-color: #4CAF50;")
+                            color = "#4CAF50" if status else "#FF0000"
+                            label.setStyleSheet(f"background-color: {color};")
                             # 随机延迟
                             delay = random.randint(delay_min, delay_max)
                             logger.info(f"等待 {delay} 秒")
