@@ -89,3 +89,5 @@
 3. 提交更改 (`git commit -m 'Add some feature'`)。
 4. 推送到分支 (`git push origin feature/YourFeature`)。
 5. 创建 **Pull Request**。
+
+![图例](resources/img/demo.png)
