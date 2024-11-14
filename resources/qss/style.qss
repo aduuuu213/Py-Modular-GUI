@@ -1,0 +1,160 @@
+/* Windows 11 Style QSS for PySide2 */
+
+/* General Styles */
+QWidget {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-family: Segoe UI, sans-serif;
+    font-size: 12px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #0078d4;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+QPushButton:hover {
+    background-color: #0063b1;
+}
+
+/* Line Edit */
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #c6c6c6;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Check Box */
+QCheckBox {
+    color: #333333;
+}
+
+QCheckBox::indicator {
+    width: 15px;
+    height: 15px;
+}
+
+QCheckBox::indicator:checked {
+    image: url(checkmark.png);
+}
+
+/* Radio Button */
+QRadioButton {
+    color: #333333;
+}
+
+QRadioButton::indicator {
+    width: 15px;
+    height: 15px;
+}
+
+QRadioButton::indicator:checked {
+    image: url(radiobutton.png);
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    background-color: #f0f0f0;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c6c6c6;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    background-color: #f0f0f0;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background-color: #f0f0f0;
+}
+
+/* Tab Widget */
+QTabWidget::pane {
+    background-color: #ffffff;
+    border: 1px solid #c6c6c6;
+    margin-top: -1px;
+}
+
+QTabBar::tab {
+    background-color: #e0e0e0;
+    color: #333333;
+    padding: 8px 15px;
+    border: 1px solid #c6c6c6;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #ffffff;
+    color: #0078d4;
+    border-bottom: 1px solid #ffffff;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #f5f5f5;
+}
+
+/* Slider */
+QSlider::groove:horizontal {
+    background-color: #f0f0f0;
+    height: 10px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #0078d4;
+    width: 15px;
+    margin: -2px 0;
+    border-radius: 7px;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #0063b1;
+}
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+QMenuBar::item {
+    background-color: #0078d4;
+    padding: 5px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #0063b1;
+}
+
+/* Menu */
+QMenu {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #c6c6c6;
+}
+
+QMenu::item {
+    background-color: #ffffff;
+    padding: 5px 20px;
+}
+
+QMenu::item:selected {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #c6c6c6;
+    margin: 5px 0;
+}

@@ -1,0 +1,12 @@
+{
+    "plugin_name": "demo",
+    "name": "演示插件",
+    "version": "0.0.1",
+    "description": "这是一个示例插件，旨在展示插件的基本功能和结构。",
+    "download_url": "http://package.smalldu.cn/package/demo/demo_0.0.1.zip",
+    "release_notes": "'测试自动打包更新'",
+    "min_app_version": "1.0",
+    "dependencies": {
+        "requests": ""
+    }
+}
