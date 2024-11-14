@@ -1,4 +1,5 @@
 # Py-Modular-GUI
+![图例](resources/img/demo.png)
 
 ## 项目简介
 **Py-Modular-GUI** 是一个基于 **Python + PySide2** 的图形用户界面，旨在快速开发和交付基于 Python 的 GUI 应用程序。该项目利用 [PyStand](https://github.com/skywind3000/PyStand) 打包方式对应用进行分发。
@@ -90,4 +91,4 @@
 4. 推送到分支 (`git push origin feature/YourFeature`)。
 5. 创建 **Pull Request**。
 
-![图例](resources/img/demo.png)
+
